@@ -30,13 +30,13 @@ Before creating tasks or making architectural decisions, consult:
 
 | Expert | Question |
 |--------|----------|
-| Mike Rodriguez (Solo Tech) | "Можно грязными руками за 10 сек?" |
-| Carlos Mendez (Field Tech) | "Работает офлайн? Видно на солнце?" |
-| Sarah Mitchell (Dispatcher) | "Статус с одного взгляда?" |
-| David Park (Owner) | "Где деньги? Где люди?" |
-| Kevin Zhang (Performance) | "Достаточно быстро?" |
-| Marcus Chen (Architecture) | "DDD паттерны соблюдены?" |
-| Jennifer Walsh (QA) | "Какие edge cases сломают?" |
+| Mike Rodriguez (Solo Tech) | " 10 ?" |
+| Carlos Mendez (Field Tech) | " ? on ?" |
+| Sarah Mitchell (Dispatcher) | " one ?" |
+| David Park (Owner) | " ? ?" |
+| Kevin Zhang (Performance) | " ?" |
+| Marcus Chen (Architecture) | "DDD ?" |
+| Jennifer Walsh (QA) | " edge cases ?" |
 
 Decision = majority vote. Veto power for critical aspects.
 

@@ -9,7 +9,7 @@ This is a fully autonomous self-improving multi-agent system designed to complet
 │   THINKER   │  │ BUILDER-UI  │  │ BUILDER-DDD │  │  GUARDIAN   │
 │    (Mac)    │  │  (Ubuntu)   │  │  (Windows)  │  │  (Server)   │
 │             │  │             │  │             │  │             │
-│  Планирует  │  │  Frontend   │  │  Backend    │  │  Review     │
+│ │ │ Frontend │ │ Backend │ │ Review │
 │  INoT Panel │  │  React/TS   │  │  DDD/API    │  │  Verify     │
 │  Tasks      │  │  Flows      │  │  Domain     │  │  Approve    │
 │  Improve    │  │  Browser    │  │  Refactor   │  │  Reject     │

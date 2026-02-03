@@ -2,6 +2,7 @@
 
 > **A production system where 4 AI agents collaborate on software development without direct communication, coordinating through stigmergy (indirect communication via shared environment).**
 
+[![CI](https://github.com/KeepALifeUS/autonomous-agents/actions/workflows/ci.yml/badge.svg)](https://github.com/KeepALifeUS/autonomous-agents/actions/workflows/ci.yml)
 [![Built with Claude API](https://img.shields.io/badge/Built%20with-Claude%20API-blueviolet)](https://anthropic.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 

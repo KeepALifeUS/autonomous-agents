@@ -182,3 +182,7 @@ Designed and implemented by [Vladyslav Shapovalov](https://linkedin.com/in/vlady
 ## License
 
 MIT License - see [LICENSE](LICENSE) for details.
+
+## Support
+
+For questions and support, please open an issue on GitHub.

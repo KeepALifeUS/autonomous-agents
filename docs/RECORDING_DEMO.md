@@ -1,64 +1,83 @@
 # Recording the Demo GIF
 
-## Tools Required
+## Quick Start (Recommended)
+
+We have a simulation script that demonstrates the multi-agent coordination:
+
+```bash
+# Run the demo simulation
+python demo/simulate_agents.py
+```
+
+This shows:
+- 🧠 THINKER creating tasks
+- ⚙️ BUILDER-DDD claiming and implementing
+- 🛡️ GUARDIAN reviewing code
+- 💡 Knowledge capture
+
+## Recording Tools
 
 - [asciinema](https://asciinema.org/) - Terminal recording
 - [agg](https://github.com/asciinema/agg) - Convert to GIF
-- OR [Gifski](https://gif.ski/) - High-quality GIF encoder
+- OR [terminalizer](https://github.com/faressoft/terminalizer) - Alternative
 
-## Quick Recording
+## Recording Steps
 
-### Option 1: Terminal Demo (Recommended)
+### 1. Install Tools
 
 ```bash
-# Install tools
+# macOS
 brew install asciinema
+npm install -g terminalizer
+
+# Or use agg for conversion
 cargo install --git https://github.com/asciinema/agg
+```
 
-# Record terminal session
+### 2. Record the Demo
+
+```bash
+# Option A: Using asciinema
 asciinema rec demo.cast
-
-# In the recording, show:
-# 1. Start the agents
-# 2. Watch them claim tasks
-# 3. See the coordination through Git commits
-# 4. Ctrl+D to stop
+python demo/simulate_agents.py
+# Press Ctrl+D when done
 
 # Convert to GIF
-agg demo.cast demo.gif --cols 100 --rows 30 --speed 2
+agg demo.cast docs/demo.gif --cols 80 --rows 24 --speed 1.5
+
+# Option B: Using terminalizer
+terminalizer record demo
+python demo/simulate_agents.py
+# Press Ctrl+D when done
+
+terminalizer render demo -o docs/demo.gif
 ```
 
-### Option 2: Screen Recording
+### 3. Optimize GIF Size
+
+```bash
+# If GIF is too large (>5MB), optimize it:
+gifsicle -O3 --lossy=80 docs/demo.gif -o docs/demo.gif
+
+# Or reduce colors:
+gifsicle --colors 64 docs/demo.gif -o docs/demo.gif
+```
+
+## Alternative: Screen Recording
 
 1. Use OBS or QuickTime to record
-2. Show the workflow in action
-3. Convert to GIF using:
+2. Convert to GIF:
 ```bash
-ffmpeg -i demo.mov -vf "fps=10,scale=700:-1:flags=lanczos" -c:v gif demo.gif
+ffmpeg -i demo.mov -vf "fps=10,scale=700:-1:flags=lanczos" docs/demo.gif
 ```
 
-## What to Show
+## Tips for Best Results
 
-1. **Start**: `python run_agents.py`
-2. **Task Creation**: THINKER creates a task in queue.json
-3. **Task Claim**: BUILDER claims and moves to active.json
-4. **Implementation**: BUILDER makes changes
-5. **Review**: GUARDIAN reviews and approves
-6. **Completion**: Task marked as done
-
-## Demo Script
-
-```bash
-# Terminal 1: Watch the task queue
-watch -n 1 cat tasks/queue.json
-
-# Terminal 2: Run agents
-python run_agents.py
-
-# Terminal 3: Watch git log
-watch -n 1 'git log --oneline -5'
-```
+- Use a dark terminal theme (looks better in GIF)
+- Set terminal to 80x24 characters
+- Keep the demo under 30 seconds
+- Target file size: under 5MB
 
 ## Output
 
-Save the final GIF as `docs/demo.gif` (max 5MB for good GitHub rendering).
+Save the final GIF as `docs/demo.gif` - it will automatically appear in the README.

@@ -15,6 +15,16 @@
 
 ---
 
+## Demo
+
+<p align="center">
+  <img src="docs/demo.gif" alt="Autonomous Agents Demo" width="700"/>
+</p>
+
+> **Watch:** 4 AI agents collaboratively fix a bug without any direct communication. The THINKER creates the task, BUILDER-DDD claims and implements it, and GUARDIAN reviews the changes — all coordinated through Git commits.
+
+---
+
 ## The Problem
 
 Building with AI agents is expensive and complex:

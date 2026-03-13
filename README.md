@@ -8,10 +8,32 @@
 
 > **4 AI agents collaborate on software development without direct communication, coordinating like ant colonies through stigmergy.**
 
+[![GitHub Stars](https://img.shields.io/github/stars/KeepALifeUS/autonomous-agents?style=social)](https://github.com/KeepALifeUS/autonomous-agents)
 [![CI](https://github.com/KeepALifeUS/autonomous-agents/actions/workflows/ci.yml/badge.svg)](https://github.com/KeepALifeUS/autonomous-agents/actions/workflows/ci.yml)
 [![Built with Claude API](https://img.shields.io/badge/Built%20with-Claude%20API-blueviolet)](https://anthropic.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
+---
+
+## Table of Contents
+
+- [Demo](#demo)
+- [The Problem](#the-problem)
+- [The Solution](#the-solution)
+- [Key Results](#key-results)
+- [Quick Start](#quick-start)
+- [Use Cases](#use-cases)
+- [How It Works](#how-it-works)
+- [Comparison with Alternatives](#comparison-with-alternatives)
+- [INoT Panel](#inot-panel-imaginary-notional-thinking)
+- [Project Structure](#project-structure)
+- [Knowledge Base](#knowledge-base)
+- [Why Stigmergy?](#why-stigmergy)
+- [Tech Stack](#tech-stack)
+- [Related Work](#related-work)
+- [Contributing](#contributing)
+- [License](#license)
 
 ---
 
@@ -87,6 +109,16 @@ export ANTHROPIC_API_KEY=your_key_here
 python run_agents.py
 ```
 
+## Use Cases
+
+- **Automated code review pipelines** -- deploy a GUARDIAN agent to continuously review PRs, enforce style guides, and catch security issues without human intervention.
+- **Multi-agent content generation** -- coordinate THINKER and BUILDER agents to plan, draft, and refine documentation, blog posts, or marketing copy in parallel.
+- **Distributed research assistants** -- spin up multiple agents to explore different aspects of a research question, with findings accumulated in the shared knowledge base.
+- **Collaborative debugging systems** -- let agents independently reproduce, diagnose, and propose fixes for bugs, coordinating through stigmergy to avoid duplicate work.
+- **Self-organizing development teams** -- scale from 4 to N agents by simply adding new agent configs; no protocol changes or orchestrator rewrites required.
+
+---
+
 ## How It Works
 
 ### 4 Specialized Agents
@@ -134,6 +166,18 @@ Every 24 hours:
 2. If pattern occurs 3+ times → draft prompt improvement
 3. Apply to agent, track metrics
 4. Evaluate after 24h, keep or revert
+
+## Comparison with Alternatives
+
+| Feature | Stigmergy (this) | LangGraph | AutoGen | CrewAI |
+|---------|:-:|:-:|:-:|:-:|
+| No central orchestrator | Yes | No | No | No |
+| Token efficiency | 80% reduction | Baseline | Baseline | Baseline |
+| Emergent coordination | Yes | No | No | Partial |
+| Knowledge persistence | Built-in | External | External | External |
+| Setup complexity | Minimal | Medium | High | Medium |
+
+---
 
 ## INoT Panel (Imaginary Notional Thinking)
 
